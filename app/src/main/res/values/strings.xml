@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DeviceAppTestTask</string>
+    <string name="menu_print">Печать</string>
+    <string name="menu_cash_gear">Касса</string>
+    <string name="menu_actions">Действия</string>
+    <string name="unknown_type_gear">Неизвестный тип кассы</string>
+</resources>

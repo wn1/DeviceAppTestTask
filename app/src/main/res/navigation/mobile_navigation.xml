@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_cash_gear">
+
+    <fragment
+        android:id="@+id/navigation_cash_gear"
+        android:name="ru.q.dev.deviceapptesttask.ui.cash_gear.CashGearFragment"
+        android:label="@string/menu_cash_gear"
+        tools:layout="@layout/fragment_print" />
+
+    <fragment
+        android:id="@+id/navigation_print"
+        android:name="ru.q.dev.deviceapptesttask.ui.print.PrintFragment"
+        android:label="@string/menu_print"
+        tools:layout="@layout/fragment_gear" />
+
+    <fragment
+        android:id="@+id/navigation_actions"
+        android:name="ru.q.dev.deviceapptesttask.ui.actions.ActionsFragment"
+        android:label="@string/menu_actions"
+        tools:layout="@layout/fragment_actions" />
+</navigation>
