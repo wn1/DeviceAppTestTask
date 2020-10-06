@@ -1,4 +1,4 @@
-package ru.q.dev.deviceapptesttask.ui.notifications
+package ru.q.dev.deviceapptesttask.ui.actions
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

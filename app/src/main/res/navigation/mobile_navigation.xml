@@ -15,11 +15,11 @@
         android:id="@+id/navigation_print"
         android:name="ru.q.dev.deviceapptesttask.ui.print.PrintFragment"
         android:label="@string/menu_print"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_gear" />
 
     <fragment
         android:id="@+id/navigation_actions"
-        android:name="ru.q.dev.deviceapptesttask.ui.notifications.ActionsFragment"
+        android:name="ru.q.dev.deviceapptesttask.ui.actions.ActionsFragment"
         android:label="@string/menu_actions"
         tools:layout="@layout/fragment_actions" />
 </navigation>

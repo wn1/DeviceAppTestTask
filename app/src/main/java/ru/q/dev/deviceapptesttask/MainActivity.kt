@@ -7,20 +7,28 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import ru.q.dev.deviceapptesttask.model.cash_gear.CashGearSelectedModel
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var cashGearSelectedModel: CashGearSelectedModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        //Инициализации модели переключения касс
+        cashGearSelectedModel = CashGearSelectedModel(this)
+
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
         val navController = findNavController(R.id.nav_host_fragment)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+
         val appBarConfiguration = AppBarConfiguration(setOf(
                 R.id.navigation_cash_gear, R.id.navigation_print, R.id.navigation_actions))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+
     }
 }

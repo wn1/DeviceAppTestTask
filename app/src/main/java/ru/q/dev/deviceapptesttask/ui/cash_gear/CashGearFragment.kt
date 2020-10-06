@@ -7,13 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import kotlinx.android.synthetic.main.fragment_dashboard.*
+import kotlinx.android.synthetic.main.fragment_gear.*
+import ru.q.dev.deviceapptesttask.MainActivity
 import ru.q.dev.deviceapptesttask.R
 
 // Фрагмент показа текущего состояния кассы. С возможностью выбора кассы
-
-// ТЗ: Приложение может работать с кассовым оборудованием.
-// В приложении есть настройка для выбора кассы.
 
 class CashGearFragment : Fragment(), CashGearView {
 
@@ -26,21 +24,23 @@ class CashGearFragment : Fragment(), CashGearView {
     ): View? {
         viewModel =
                 ViewModelProviders.of(this).get(CashGearViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
+        val root = inflater.inflate(R.layout.fragment_gear, container, false)
         return root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        viewModel.setup(this) //Настраиваем модель при пересоздании view
+        //Настраиваем модель при пересоздании view
+        viewModel.setup(this, (activity as MainActivity).cashGearSelectedModel)
 
         viewModel.cashGear.observe(viewLifecycleOwner, Observer {
-            cashGear.text = it.idName
+            // Показываем идентификатор кассы
+           cashGear.text = it.idName
         })
 
         cashGear.setOnClickListener {
-
+        // TODO Показываем диалог переключения касс
         }
     }
 
