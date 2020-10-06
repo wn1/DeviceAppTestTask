@@ -1,4 +1,4 @@
-package ru.q.dev.deviceapptesttask.ui.notifications
+package ru.q.dev.deviceapptesttask.ui.print
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import ru.q.dev.deviceapptesttask.R
 
-class NotificationsFragment : Fragment() {
+class PrintFragment : Fragment() {
 
-    private lateinit var notificationsViewModel: NotificationsViewModel
+    private lateinit var printViewModel: PrintViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        notificationsViewModel =
-                ViewModelProviders.of(this).get(NotificationsViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_notifications, container, false)
-        val textView: TextView = root.findViewById(R.id.text_notifications)
-        notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
+        printViewModel =
+                ViewModelProviders.of(this).get(PrintViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_print, container, false)
+        val textView: TextView = root.findViewById(R.id.text_home)
+        printViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

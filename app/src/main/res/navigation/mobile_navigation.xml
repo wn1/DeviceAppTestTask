@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_cash_gear">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="ru.q.dev.deviceapptesttask.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_cash_gear"
+        android:name="ru.q.dev.deviceapptesttask.ui.cash_gear.CashGearFragment"
+        android:label="@string/menu_cash_gear"
+        tools:layout="@layout/fragment_print" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="ru.q.dev.deviceapptesttask.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
+        android:id="@+id/navigation_print"
+        android:name="ru.q.dev.deviceapptesttask.ui.print.PrintFragment"
+        android:label="@string/menu_print"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="ru.q.dev.deviceapptesttask.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_actions"
+        android:name="ru.q.dev.deviceapptesttask.ui.notifications.ActionsFragment"
+        android:label="@string/menu_actions"
+        tools:layout="@layout/fragment_actions" />
 </navigation>

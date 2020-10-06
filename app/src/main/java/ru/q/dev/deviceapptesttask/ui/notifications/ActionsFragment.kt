@@ -1,4 +1,4 @@
-package ru.q.dev.deviceapptesttask.ui.dashboard
+package ru.q.dev.deviceapptesttask.ui.notifications
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import ru.q.dev.deviceapptesttask.R
 
-class DashboardFragment : Fragment() {
+class ActionsFragment : Fragment() {
 
-    private lateinit var dashboardViewModel: DashboardViewModel
+    private lateinit var actionsViewModel: ActionsViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        dashboardViewModel =
-                ViewModelProviders.of(this).get(DashboardViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
+        actionsViewModel =
+                ViewModelProviders.of(this).get(ActionsViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_actions, container, false)
+        val textView: TextView = root.findViewById(R.id.text_notifications)
+        actionsViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root
